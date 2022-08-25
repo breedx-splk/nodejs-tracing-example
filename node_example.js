@@ -1,8 +1,11 @@
 const { startTracing } = require('@splunk/otel');
-const { trace } = require('@opentelemetry/api');
+// const { trace } = require('@opentelemetry/api');
+const { trace, diag, DiagConsoleLogger, DiagLogLevel } = require('@opentelemetry/api');
+
+diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.DEBUG)
 
 startTracing({
-    serviceName: 'nodejs-example-service',
+    serviceName: 'nodejs-example',
 });
 
 const tracer = trace.getTracer('example-tracer');
