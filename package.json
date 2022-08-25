@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-tracing-example",
+  "version": "1.0.0",
+  "description": "Unofficial example of how to use Splunk's distribution of OpenTelemetry for nodejs.",
+  "main": "node_example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breedx-splk/nodejs-tracing-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breedx-splk/nodejs-tracing-example/issues"
+  },
+  "homepage": "https://github.com/breedx-splk/nodejs-tracing-example#readme",
+  "dependencies": {
+    "@splunk/otel": "^1.2.1"
+  }
+}
