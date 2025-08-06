@@ -11,20 +11,17 @@ cd nodejs-tracing-example
 npm install
 ```
 
-Next, you MUST customize your environment by editing `run-node.sh`
-and updating the first two lines. 
+Assuming that you have a collector running and reachable
+on localhost, things should just work out of the box.
+
+
+You MAY customize your environment by editing `run-node.sh`
+and adjusting the settings. By default, the configuration assumes
+that data will be exported in OTLP to localhost.
+
 
 ```
 vi run-node.js
-```
-
-The first line must contain the realm that you want to send data to
-(usually us0 or us1 or eu0), and the second line must contain a valid 
-ingest token for that realm:
-
-```
-export REALM="us1"
-export SPLUNK_ACCESS_TOKEN="<enter token here>"
 ```
 
 Save the file.
