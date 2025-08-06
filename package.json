@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/breedx-splk/nodejs-tracing-example#readme",
   "dependencies": {
-    "@splunk/otel": "^1.2.1"
+    "@splunk/otel": "^3.3.0"
   }
 }
