@@ -12,10 +12,15 @@ const tracer = trace.getTracer('example-tracer');
 setInterval(() => { 
     tracer.startActiveSpan('outer', outer => {
         console.log('Outer');
-        tracer.startActiveSpan('inner', inner => {
-            console.log('Inner');
-            inner.end();
-            outer.end();    
-        });
+        setTimeout(() => {
+            tracer.startActiveSpan('inner', inner => {
+                console.log('Inner');
+                setTimeout(() => { 
+                    inner.end();
+                    outer.end();    
+                }, 100);
+            });
+        }, 100);
+        
     });
-}, 1000);
+}, 500);

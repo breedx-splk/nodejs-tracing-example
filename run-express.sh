@@ -6,8 +6,8 @@ export OTEL_SERVICE_NAME="nodejs-example"
 export OTEL_RESOURCE_ATTRIBUTES='deployment.environment.name=jjp-dev'
 export OTEL_LOG_LEVEL="DEBUG"
 
-export SPLUNK_PROFILER_ENABLED=true
+# export SPLUNK_PROFILER_ENABLED=true
 export SPLUNK_SNAPSHOT_PROFILER_ENABLED=true
-export SPLUNK_SNAPSHOT_SELECTION_RATE=1.0
+export SPLUNK_SNAPSHOT_SELECTION_RATE=0.1
 
-node node_example.js | tee out.txt
+node -r @splunk/otel/instrument express_hello.js | tee out.txt
