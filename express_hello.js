@@ -13,9 +13,9 @@ const server = http.createServer((req, res) => {
       setTimeout(() => { 
         res.end('Hi, you silly goose!\n');
         child.end();
-      }, 100);
+      }, 1000);
     });
-  }, 100);
+  }, 1000);
 });
 
 const port = 3000;
